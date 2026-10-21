@@ -1,0 +1,9 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+build/
+debug.log
+.pytest_cache/
+__pycache__/
+*.zip
+visitor.plan
