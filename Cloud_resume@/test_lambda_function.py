@@ -1,5 +1,8 @@
 import json
+import os
 from unittest.mock import MagicMock
+
+os.environ.setdefault("AWS_DEFAULT_REGION", "us-east-1")
 
 import Lambda_function
 
