@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Olusegun Richard Babatola — IT Infrastructure and Cloud Operations Professional specializing in enterprise infrastructure and developing cloud reliability skills.">
+  <title>Olusegun Richard Babatola | SRE Resume</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #536176;
+      --accent: #185abd;
+      --navy: #142747;
+      --line: #dce3ed;
+      --paper: #fff;
+      --canvas: #eef2f7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font: 13px/1.5 Arial, Helvetica, sans-serif;
+    }
+    .toolbar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px;
+    }
+    .toolbar button {
+      padding: 10px 15px;
+      border: 0;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .toolbar .secondary {
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--ink);
+    }
+    .resume {
+      width: min(940px, calc(100% - 28px));
+      margin: 0 auto 30px;
+      background: var(--paper);
+      box-shadow: 0 8px 32px rgba(20, 39, 71, .12);
+    }
+    header {
+      padding: 34px 44px 27px;
+      color: #fff;
+      background: var(--navy);
+      border-bottom: 5px solid var(--accent);
+    }
+    header h1 {
+      margin: 0 0 6px;
+      font-size: clamp(25px, 4vw, 34px);
+      line-height: 1.16;
+      letter-spacing: .35px;
+    }
+    .headline {
+      margin: 0 0 14px;
+      color: #dce8ff;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 17px;
+      font-size: 12px;
+      color: #f1f5fc;
+    }
+    a { color: inherit; }
+    .contact a { text-underline-offset: 3px; }
+    main { padding: 28px 44px 38px; }
+    section { margin: 0 0 23px; }
+    h2 {
+      margin: 0 0 11px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--line);
+      color: #173b73;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    p { margin: 0 0 8px; }
+    .summary { color: #29364b; }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .skill-group {
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      break-inside: avoid;
+    }
+    .skill-group h3 {
+      margin: 0 0 5px;
+      color: #173b73;
+      font-size: 12.5px;
+    }
+    .skill-group ul {
+      margin: 0;
+      padding-left: 17px;
+      color: #354258;
+      font-size: 11.7px;
+    }
+    .skill-group li { margin-bottom: 2px; }
+    .job, .project, .education-item { margin-bottom: 17px; break-inside: avoid; }
+    .job-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 2px;
+    }
+    .job h3, .project h3, .education-item h3 {
+      margin: 0;
+      font-size: 14px;
+      color: #172033;
+    }
+    .date {
+      color: var(--muted);
+      font-size: 11.5px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .role { margin: 0 0 6px; color: #31517e; font-weight: 700; }
+    ul { margin: 5px 0 0; padding-left: 18px; }
+    li { margin: 0 0 4px; padding-left: 1px; }
+    .project-meta { margin: 3px 0 5px; color: var(--muted); font-size: 11.5px; }
+    .status {
+      display: inline-block;
+      margin-left: 5px;
+      padding: 2px 7px;
+      border-radius: 20px;
+      background: #eaf2ff;
+      color: #174ea6;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      vertical-align: 2px;
+    }
+    .note { color: var(--muted); font-size: 11px; font-style: italic; }
+    footer {
+      padding: 13px 44px 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 10.5px;
+    }
+    @media (max-width: 650px) {
+      header { padding: 27px 22px 22px; }
+      main { padding: 22px; }
+      footer { padding: 13px 22px 18px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .job-heading { display: block; }
+      .date { display: block; margin-top: 2px; }
+    }
+    @page { size: A4; margin: 11mm; }
+    @media print {
+      body { background: #fff; font-size: 9.5pt; }
+      .toolbar, .note-toggle { display: none !important; }
+      .resume { width: 100%; margin: 0; box-shadow: none; }
+      header {
+        padding: 20px 25px 16px;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      header h1 { font-size: 23pt; }
+      main { padding: 17px 25px 20px; }
+      footer { padding: 10px 25px; }
+      section { margin-bottom: 15px; }
+      h2 { font-size: 10.5pt; }
+      .skills-grid { gap: 7px; }
+      .skill-group { padding: 7px 9px; }
+      .status {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button onclick="window.print()">Print / Save as PDF</button>
+      </div>
+
+  <article class="resume">
+    <header>
+      <h1>OLUSEGUN RICHARD BABATOLA</h1>
+      <p class="headline">IT Infrastructure &amp; Cloud Operations Professional | Site Reliability Engineering</p>
+      <div class="contact">
+        <span>Ontario, Canada</span>
+        <a href="tel:+16472168433">+1-647-216-8433</a>
+        <a href="mailto:Babatolaor@yahoo.com">Babatolaor@yahoo.com</a>
+        <a href="https://github.com/babatolaor8433" target="_blank" rel="noopener noreferrer">github.com/babatolaor8433</a>
+      </div>
+    </header>
+
+    <main>
+      <p id="edit-note" class="note" hidden></p>
+
+      <section>
+        <h2>Professional Summary</h2>
+        <p class="summary">IT Infrastructure and Operations professional with 8+ years of experience supporting enterprise IT environments, including on-premises infrastructure, networking, systems administration, monitoring, security, and business continuity. Experienced in troubleshooting infrastructure incidents, monitoring service availability, supporting disaster recovery initiatives, and maintaining reliable business-critical systems across multi-site environments.</p>
+        <p class="summary">Building on a strong foundation in traditional infrastructure operations, with a growing focus on cloud engineering, automation, infrastructure as code, and Site Reliability Engineering (SRE) practices. Familiar with AWS, Python, virtualization, infrastructure monitoring, and IT service management. Interested in applying operational experience, analytical troubleshooting, and continuous improvement to improve system reliability, scalability, and operational efficiency in cloud and hybrid environments.</p>
+      </section>
+
+      <section>
+        <h2>Core Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Infrastructure &amp; Systems Administration</h3>
+            <ul>
+              <li>Enterprise on-premises infrastructure and hybrid IT environments</li>
+              <li>Windows Server and Windows desktop environments</li>
+              <li>Active Directory, identity and access management</li>
+              <li>Virtualization concepts and VMware ESXi</li>
+              <li>Server, endpoint, hardware and software troubleshooting</li>
+              <li>Infrastructure maintenance, configuration and lifecycle management</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Cloud &amp; Infrastructure Engineering</h3>
+            <ul>
+              <li>Amazon Web Services (AWS)</li>
+              <li>Cloud infrastructure fundamentals and service availability</li>
+              <li>Identity and Access Management (IAM)</li>
+              <li>Cloud security fundamentals and access controls</li>
+              <li>Infrastructure migration and hybrid infrastructure concepts</li>
+              <li>Infrastructure as Code (IaC) fundamentals</li>
+              <li>AWS S3, Lambda, API Gateway, DynamoDB and CloudFront</li>
+              <li>Cloud deployment and configuration management concepts</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Monitoring, Reliability &amp; Incident Management</h3>
+            <ul>
+              <li>Infrastructure monitoring and alerting using PRTG and Nagios XI</li>
+              <li>Incident investigation, root-cause analysis and troubleshooting</li>
+              <li>Service availability and performance monitoring</li>
+              <li>Incident escalation and problem management</li>
+              <li>Disaster recovery and business continuity</li>
+              <li>Change management and ITIL-based service operations</li>
+              <li>Service-level agreement (SLA) monitoring and reporting</li>
+              <li>Preventive maintenance and operational documentation</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Networking &amp; Security</h3>
+            <ul>
+              <li>TCP/IP, DNS, DHCP, VPN and enterprise connectivity</li>
+              <li>Firewall administration and troubleshooting using Sophos Firewall</li>
+              <li>Network availability, ISP performance and connectivity troubleshooting</li>
+              <li>Access controls, encryption and security incident support</li>
+              <li>Enterprise endpoint and infrastructure security</li>
+              <li>CCTV/IP camera infrastructure and network-connected devices</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Scripting, Automation &amp; Development</h3>
+            <ul>
+              <li>Python scripting fundamentals</li>
+              <li>SQL querying, reporting and database support</li>
+              <li>Git and GitHub version control</li>
+              <li>Automation of repetitive operational tasks</li>
+              <li>CI/CD concepts and automated deployment workflows</li>
+              <li>Infrastructure configuration and deployment automation concepts</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Tools &amp; Platforms</h3>
+            <ul>
+              <li>ServiceNow, ITIL practices and incident management</li>
+              <li>PRTG Network Monitor and Nagios XI</li>
+              <li>Microsoft 365, Windows and Active Directory</li>
+              <li>SCCM, Microsoft Intune and Jamf Pro</li>
+              <li>VMware ESXi</li>
+              <li>Sophos Firewall</li>
+              <li>AWS management tools and services</li>
+              <li>SQL and enterprise business applications</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Professional Experience</h2>
+
+        <div class="job">
+          <div class="job-heading">
+            <h3>ZWILLING J.A. Henckels LLC — Canada</h3>
+            <span class="date">February 2024 – July 2025</span>
+          </div>
+          <p class="role">IT Support Analyst</p>
+          <ul>
+            <li>Supported enterprise IT operations by troubleshooting hardware, software, operating system, connectivity and access-related incidents.</li>
+            <li>Used ServiceNow to document incidents, manage service requests, track progress and support SLA compliance.</li>
+            <li>Supported Microsoft 365, Active Directory, Windows endpoints and enterprise productivity applications.</li>
+            <li>Assisted with endpoint configuration, asset management, software deployment and device lifecycle activities.</li>
+            <li>Investigated recurring technical issues, escalated complex incidents and documented resolutions to improve support consistency.</li>
+            <li>Contributed to knowledge-base documentation and operational procedures to support repeatable troubleshooting and service delivery.</li>
+            <li>Supported business continuity and disaster recovery-related operational activities, including infrastructure and backup-related processes.</li>
+            <li>Worked with technical teams to resolve issues affecting end-user productivity and the availability of business technology services.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-heading">
+            <h3>Mainstream Energy Solutions Limited — Nigeria</h3>
+            <span class="date">May 2019 – December 2023</span>
+          </div>
+          <p class="role">IT Business Infrastructure / Unit Lead, Business Infrastructure Support</p>
+          <ul>
+            <li>Supported enterprise infrastructure operations in a business-critical power generation environment, helping maintain reliable IT services across operational locations.</li>
+            <li>Monitored network and infrastructure availability using PRTG and Nagios XI, investigating connectivity issues and performance degradation.</li>
+            <li>Monitored connectivity across nine ISP connections and coordinated troubleshooting with telecommunications providers to reduce service interruptions and improve network availability.</li>
+            <li>Administered and supported Sophos Firewall environments, assisting with network security, connectivity troubleshooting and access control.</li>
+            <li>Supported Windows-based infrastructure, Active Directory, user access, enterprise applications and network-connected devices.</li>
+            <li>Contributed to disaster recovery planning, backup-related activities and business continuity initiatives to support operational resilience.</li>
+            <li>Supported the deployment and maintenance of more than 300 Hikvision CCTV cameras and associated infrastructure.</li>
+            <li>Coordinated infrastructure troubleshooting and implementation activities across more than 20 IT projects, working with internal teams and external service providers.</li>
+            <li>Investigated recurring infrastructure incidents, identified contributing factors and implemented corrective actions to improve service reliability.</li>
+            <li>Documented infrastructure configurations, technical issues, support procedures and operational activities to improve knowledge sharing and incident resolution.</li>
+            <li>Supported business-critical applications and services, including SUNSYSTEM, Officemate, PTW and internal learning management platforms.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-heading">
+            <h3>Access Pensions / Sigma Pensions — Nigeria</h3>
+            <span class="date">October 2012 – May 2019</span>
+          </div>
+          <p class="role">Assistant Database Administrator / Analyst</p>
+          <ul>
+            <li>Supported enterprise database applications and business systems used for daily operational activities.</li>
+            <li>Investigated application errors, database-related incidents and data discrepancies, coordinating resolutions with relevant technical and business teams.</li>
+            <li>Used SQL queries and reporting tools to extract, validate and analyze business data.</li>
+            <li>Supported application testing, user acceptance testing (UAT) and production issue investigation.</li>
+            <li>Assisted with database reporting, scheduled reports and automated SMS notification processes.</li>
+            <li>Supported business application availability through incident documentation, troubleshooting and coordination of corrective actions.</li>
+            <li>Contributed to disaster recovery and business continuity activities for business applications and supporting data.</li>
+            <li>Worked with stakeholders to identify recurring system issues and improve application support processes.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Selected Technical Projects</h2>
+        <div class="project">
+          <h3>Enterprise Infrastructure Monitoring &amp; Network Reliability</h3>
+          <p class="project-meta">Environment: PRTG, Nagios XI, Sophos Firewall, ISP connectivity, enterprise networking</p>
+          <ul>
+            <li>Supported monitoring of network connectivity across nine ISP connections.</li>
+            <li>Investigated outages, connectivity degradation and network performance issues.</li>
+            <li>Coordinated incident resolution with telecommunications providers and internal stakeholders.</li>
+            <li>Contributed to improved visibility into infrastructure availability and more effective incident response.</li>
+          </ul>
+        </div>
+        <div class="project">
+          <h3>Infrastructure Resilience &amp; Disaster Recovery Support</h3>
+          <p class="project-meta">Environment: Enterprise infrastructure, backup and recovery processes, business continuity</p>
+          <ul>
+            <li>Participated in infrastructure support activities related to disaster recovery and business continuity.</li>
+            <li>Supported troubleshooting, operational documentation and recovery-related procedures.</li>
+            <li>Helped maintain business-critical technology services in an enterprise operating environment.</li>
+          </ul>
+        </div>
+        <div class="project">
+          <h3>Cloud Infrastructure & Site Reliability Engineering Projects <span class="status"></span></h3>
+          <p class="project-meta">Planned environment: AWS, S3, CloudFront, Lambda, API Gateway, DynamoDB, Python, GitHub Actions, AWS SAM</p>
+          <ul>
+            <li>Architected a serverless microservice using AWS Lambda, API Gateway, and DynamoDB to dynamically process application metrics.</li>
+            <li>Deployed a secure, global frontend infrastructure using Amazon S3 and CloudFront (CDN) with HTTPS encryption via ACM.</li>
+            <li>Automated 100% of cloud provisioning as Infrastructure as Code (IaC) using Terraform to eliminate manual configuration drift.</li>
+            <li>Engineered end-to-end CI/CD pipelines using GitHub Actions to automate backend unit testing and zero-downtime deployments.</li>
+            <li>Hardened environment security by implementing strict CORS policies and blocking direct public bucket access via CloudFront OAC.</li>
+            <li>Developed backend data logic using Python (Boto3 SDK) to handle transactional read/write operations with NoSQL storage.</li>
+            <li>Established application monitoring by configuring Amazon CloudWatch log groups and custom execution metrics for rapid debugging.</li>
+          </ul>
+        
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="education-item">
+          <div class="job-heading">
+            <h3>Nigeria Defence Academy</h3>
+            <span class="date">October 2022</span>
+          </div>
+          <p>Master’s Degree, Intelligence &amp; Cybersecurity</p>
+        </div>
+        <div class="education-item">
+          <div class="job-heading">
+            <h3>National Open University, Nigeria</h3>
+            <span class="date">January 2015</span>
+          </div>
+          <p>Postgraduate Degree, Information Technology</p>
+        </div>
+        <div class="education-item">
+          <div class="job-heading">
+            <h3>The Polytechnic, Ibadan</h3>
+            <span class="date">December 2009</span>
+          </div>
+          <p>Bachelor of Technology, Computer Science</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Certifications</h2>
+        <ul>
+          <li>ITIL 4 Foundation</li>
+        </ul>
+      </section>
+
+
+    </main>
+
+    <footer>
+        <!-- Add this line below to display the counter -->
+        <p>Total Views: <span id="visitor-count">Loading...</span></p>
+    
+        <script>
+            
+  fetch("https://2q3c9u730k.execute-api.us-east-1.amazonaws.com/")
+    .then(function (response) { return response.json(); })
+    .then(function (data) {
+      document.getElementById("visitor-count").textContent = "Views: " + data.count;
+    })
+    .catch(function () {
+      document.getElementById("visitor-count").textContent = "Views: unavailable";
+    });
+</script>
+    </footer>
+  </article>
+</body>
+</html>
