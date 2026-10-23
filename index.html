@@ -432,7 +432,8 @@
   fetch("https://2q3c9u730k.execute-api.us-east-1.amazonaws.com/")
     .then(function (response) { return response.json(); })
     .then(function (data) {
-      document.getElementById("visitor-count").textContent = "Views: " + data.count;
+    document.getElementById("visitor-count").textContent = "Views: " + data.count;
+})
     })
     .catch(function () {
       document.getElementById("visitor-count").textContent = "Views: unavailable";
