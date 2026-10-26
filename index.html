@@ -424,20 +424,18 @@
     </main>
 
     <footer>
-        <!-- Add this line below to display the counter -->
-        <p>Total Views: <span id="visitor-count">Loading...</span></p>
-    
-        <script>
-     fetch("https://2q3c9u730k.execute-api.us-east-1.amazonaws.com/")
-    .then(function (response) { return response.json(); })
-    .then(function (data) {
-    document.getElementById("visitor-count").textContent = "Views: " + data.count;
-})
-    </script>
-    .catch(function () {
-      document.getElementById("visitor-count").textContent = "Views: unavailable";
-    });
-</script>
+      <p>Total Views: <span id="visitor-count">Loading...</span></p>
+      Olusegun Richard Babatola · IT Infrastructure &amp; Cloud Operations · Site Reliability Engineering
+      <script>
+        fetch('https://amazonaws.com/')
+          .then(function (response) { return response.json(); })
+          .then(function (data) {
+            document.getElementById("visitor-count").textContent = data.count;
+          })
+          .catch(function () {
+            document.getElementById("visitor-count").textContent = "unavailable";
+          });
+      </script>
     </footer>
   </article>
 </body>
