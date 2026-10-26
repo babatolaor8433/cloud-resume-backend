@@ -426,16 +426,16 @@
     <footer>
       <p>Total Views: <span id="visitor-count">Loading...</span></p>
       Olusegun Richard Babatola · IT Infrastructure &amp; Cloud Operations · Site Reliability Engineering
-      <script>
-        fetch('https://amazonaws.com/')
-          .then(function (response) { return response.json(); })
-          .then(function (data) {
-            document.getElementById("visitor-count").textContent = data.count;
-          })
-          .catch(function () {
-            document.getElementById("visitor-count").textContent = "unavailable";
-          });
-      </script>
+
+<script>
+        fetch('https://amazonaws.com')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('visitor-count').textContent = data;
+            })
+            .catch(function (error);                console.log(error);
+            });
+    </script>
     </footer>
   </article>
 </body>
