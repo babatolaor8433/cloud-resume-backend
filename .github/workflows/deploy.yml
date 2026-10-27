@@ -1,29 +1,14 @@
-name: deploy-api
+name: deploy-site
 
 on:
   push:
     branches: [main]
 
 jobs:
-  test-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install test dependencies
-        run: pip install boto3 pytest
-
-      - name: Run tests
-        working-directory: Cloud_resume@
-        run: pytest test_lambda_function.py -v
-
-      - uses: hashicorp/setup-terraform@v3
-        with:
-          terraform_version: "1.16.5"
 
       - uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -31,7 +16,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Deploy
+      - name: Publish resume
         run: |
-          terraform init -input=false
-          terraform apply -input=false -auto-approve
+          aws s3 cp index.html s3://babatolaor8433/index.html --content-type text/html
+          aws cloudfront create-invalidation --distribution-id E1Y7QCPQJEEA3S --paths / /index.html
