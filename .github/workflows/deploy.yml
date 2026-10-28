@@ -16,7 +16,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Publish resume
-        run: |
-          aws s3 cp index.html s3://babatolaor8433/index.html --content-type text/html
-          aws cloudfront create-invalidation --distribution-id E1Y7QCPQJEEA3S --paths / /index.html
+      
